@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phở A.Tấn</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <p class="logo">A.Tấn</p>
+    </header>
+
+    <nav>
+        <a href="#">
+            <button class="nav-home" href>
+                <i class="fa-solid fa-house"></i>
+            </button>
+        </a>
+
+        <a href="calen2.html">
+            <button class="nav-calen">
+                <i class="fa-regular fa-calendar"></i>
+            </button>
+        </a>
+    </nav>
+
+    <div class="content">
+        <div class="calc-section">
+            <div class="form rev">
+                <p class="form-heading">Doanh thu</p>
+
+                <div class="form-group">
+                    <div class="form-field">
+                        <label for="">Số tô</label>
+                        <input class="bowl-count" type="text">  <!-- type="text" để người dùng có thể nhập dấu , -->
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="">Đơn giá/tô(k)</label>
+                        <input class="bowl-price" type="text">
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+                
+                <div class="form-submit">
+                    <button>OK</button>
+                </div>
+            </div>
+
+            <div class="form costs">
+                <p class="form-heading">Chi phí</p>
+
+                <div class="form-group">
+                    <div class="form-field">
+                        <label for="">Nguyên liệu</label>
+                        <input class="ingr" type="text">
+                        <span class="error-message"></span>
+                    </div>
+    
+                    <div class="form-field">
+                        <label for="">Giá(k)</label>
+                        <input class="ingr-cost" type="text">
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+
+                <div class="form-submit">
+                    <button>OK</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="report-section">
+            <div class="report-heading">
+                <span class="date"></span>
+            </div>
+            
+            <div class="report-body">
+                <div class="bowl-count">
+                    <span class="title">Số tô:</span>
+                    
+                    <span class="data">___</span>
+                </div>
+
+                <div class="rev">
+                    <span class="title">Doanh thu:</span>
+                    <span class="data">___</span>
+                </div>
+
+                <div class="costs">
+                    <span class="title">Nguyên liệu & Chi phí:</span>
+                    <div class="table">
+                        <div class="ingr-list">
+                            
+                        </div>
+                        <!-- <div class="line">
+                            <span class="material">Bò</span>
+                            <div class="group">
+                                <span class="price-data">150k</span>
+                                <i class="fa-solid fa-pen icon"></i>
+                            </div>
+                        </div> -->
+
+                        <div class="line add">
+                            <div class="costs-add-button">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </div>
+
+                        <div class="line total-cost">
+                            <span class="title">Tổng</span>
+                            <span class="data">___</span>
+                        </div>
+                        </div>
+                </div>
+
+                <div class="profit">
+                    <span class="title">Lợi nhuận:</span>
+                    <span class="data">___</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal-container">
+            <div class="modal-body">
+                <div class="form-group">
+                    <div class="form-field">
+                        <label for="">Số tô</label>
+                        <input type="text">
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="">Đơn giá/tô</label>
+                        <input type="text">
+                    </div>
+                </div>
+
+                <div class="form-submit">
+                    <button>OK</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-close">
+                    <i class="fa-solid fa-xmark icon"></i>
+                    Đóng
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

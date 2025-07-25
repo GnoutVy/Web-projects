@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --header-height: 50px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+
+    /* không được bôi đen */
+    /* user-select: none;
+    -webkit-user-select: none; 
+    -ms-user-select: none;    
+    -webkit-tap-highlight-color: transparent; */
+}
+
+html, body {
+    height: 120%;
+}
+
+/* ---------------------------------------------------- Header */
+header {
+    background-color: #121212;
+    color: #fff;
+    line-height: var(--header-height);
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+header .logo {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+/* ----------------------------------------------- Navbar */
+nav {
+    background-color: #121212;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 64px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav button {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    width: 50px;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav button i {
+    font-size: 24px;
+}
+
+/* ---------------------------------------- Content - Home */
+.content {
+    margin-top: var(--header-height);
+    padding: 20px;
+}
+
+/* ----------- Calculate forms ---------- */
+.calc-section .form-heading {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.calc-section-form {
+    margin-bottom: 32px
+}
+
+.form-group { /*.calc-section */
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form-group label { /*.calc-section */
+    font-size: 18px;
+}
+
+.form-field { /*.calc-section */
+    display: flex;
+    flex-direction: column;
+}
+
+input, .error-message { /*.calc-section */
+    width: 130px;
+}
+
+.error-message {
+    color: #ff5e1e;
+    font-size: 12px
+}
+
+.form-submit { /*.calc-section */
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+}
+
+.form-submit button { /*.calc-section */
+    padding: 2px 16px;
+}
+
+.form-result {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    background-color: #e8e8e8
+}
+
+/* ----------Content display--------- */
+.report-section .report-heading {
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 8px;
+}
+
+.report-section .title {
+    color: #474747;
+}
+
+.report-section .bowl-count .data,
+.report-section .rev .data {
+    margin: 0 8px;
+}
+
+.report-section .bowl-count .data {
+    border-bottom: 2px solid #ccc
+}
+
+.report-section .costs .table {
+    margin: 0 16px;
+    margin-top: 4px
+}
+
+.report-section .costs .table .line {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.report-section .costs 
+.table .line:not(:last-child),
+.report-section .costs 
+.table .ingr-list .line {
+    border-bottom: 1px solid #ccc;
+}
+
+.report-section .costs-add-button {
+    background-color: #ccc;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* ----------------------------------------------- Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.open {
+    display: flex;
+}
+
+.modal-container {
+    min-height: 200px;
+    width: 300px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 10px;
+}
+
+.modal-body {
+    margin: 20px 20px 0;
+}
+
+.modal .form-group {
+    display: flex;
+    justify-content: space-between
+}
+
+.modal input {
+    width: 110px
+}
+
+.modal-footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.modal-close {
+    border: none;
+    background-color: #ff4c05;
+    color: #fff;
+    padding: 4px 12px;
+    font-size: 18px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* ---------------------------------- */
+/* ------------------------------------------------------ calendar */
+/* ---------------------------------- */
+.calendar {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar-container {
+    min-width: 300px;
+    min-height: 250px;
+    background-color: #fee4ca;
+    padding: 20px;
+    border-radius: 24px;
+    position: relative;
+}
+
+.calendar-container * {
+    font-size: 16px;
+    color: #222
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.calendar-header * {
+    font-size: 22px;
+}
+
+
+.month-list {
+    position: absolute;
+    background-color: #fee4ca;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 24px;
+    padding: 20px;
+    display: none;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.month-item {
+    font-size: 18px;
+    padding: 8px 2px;
+    border-radius: 4px;
+}
+
+.month-item:active {
+    background-color: #ffc69b ;
+}
+
+.show-months {
+    display: grid;
+}
+
+.hide {
+    display: none;
+}
+
+.year-picker {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    place-items: center;
+    margin-bottom: 4px;
+}
+
+.days * {
+    color: #9f9f9f;
+}
+
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    place-items: center;
+}
+
+.dates-item {
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.today {
+    background-color: #ffb379
+}
+
+.dates-item:active {
+    background-color: #ffc69b;
+}
+
+.monthly-statistics-button button {
+    float: right;
+    border: none;
+    padding: 4px 16px;
+    border-radius: 10px;
+    background-color: #f9c78d
+}
